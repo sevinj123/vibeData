@@ -1,0 +1,29 @@
+@import './partials/variables';
+@import './partials/header.scss';
+@import './partials/about.scss';
+@import './partials/blog';
+@import './partials/get-plan';
+@import './partials/login';
+
+
+header{
+    background-image: url(https://i1.wp.com/vibedate.com.au/wp-content/uploads/2018/06/herocouple.jpg?fit=1920%2C1191&ssl=1);
+   background-size: cover;
+}
+nav{
+    padding-top: 35px;
+}
+#what-we-plan{
+    background-image: url(https://vibedate.com.au/wp-content/uploads/2014/09/home_app_why_bg.png);
+    background-size: cover;
+}
+#get-plan{
+    background-image: url(https://i1.wp.com/vibedate.com.au/wp-content/uploads/2018/07/vibedate-main-dimmed-1.jpg?fit=1920%2C1080&ssl=1);
+    background-size: cover;
+    height: 50vh;
+}
+#login{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWE4kjtTLWU6_iLJwcsOdbt9m59pPEbMEV1BFuA218L7uVAB3L);
+    background-size: cover;
+    height: 50vh;
+}

@@ -1,0 +1,185 @@
+header {
+    nav {
+        .logo {
+            width: 13%;
+        }
+
+        .login {
+            height: 46px;
+            width: 100px;
+            background-color: transparent;
+            color: $white-color;
+            border: 1px solid;
+            border-radius: 5px;
+            font-size: 20px;
+
+            &:hover {
+                background-color: $primary-color;
+                color: $white-color;
+            }
+        }
+    }
+}
+
+header {
+    nav {
+        .home {
+            background-color: $primary-color;
+            border-radius: 5px;
+        }
+
+        .nav-linkk {
+            color: $white-color;
+            font-size: 20px;
+            margin: 0 7px;
+
+            &:hover {
+                background-color: $primary-color ;
+                color: $white-color;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+header {
+    .header-text {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        h1 {
+            font-family: 'Yuji Hentaigana Akari', cursive;
+            font-size: 60px;
+            color: $white-color;
+            font-style: inherit;
+            margin-top: 5%;
+        }
+
+        p {
+            color: $white-color;
+            margin: 3% auto;
+            font-size: 21px;
+
+        }
+    }
+}
+
+header {
+    .f-btn-out {
+        margin: 37% 0 5%;
+        align-items: center;
+        text-align: center;
+        top: 5rem;
+
+        .find-out {
+            height: 40px;
+            width: 160px;
+            border-radius: 20px;
+            background-color: $primary-color;
+            color: $white-color;
+            border: 0;
+
+            &:hover {
+                background-color: $white-color;
+                color: $black-color;
+            }
+        }
+
+    }
+}
+
+#what-we-do {
+    .wwd-items {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 6%;
+
+        p {
+            font-size: 23px;
+            color: $gray-color;
+        }
+    }
+}
+
+.card {
+    .card-img-topp {
+        border-radius: 50%;
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+.get-plan {
+    background-color: $primary-color;
+    text-decoration: none;
+    color: $white-color;
+    padding: 20px 30px;
+    width: 19%;
+    margin: 4% auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+#what-we-plan {
+    .scavenger {
+        font-size: 25px;
+        color: $gray-color;
+        margin-bottom: 5%;
+    }
+
+    .relishing {
+        color: $gray-color;
+    }
+}
+
+#what-others-says {
+    height: 50vh;
+    background-color: $white-gray-color;
+
+    .radio-national {
+        img {
+            width: 50%;
+        }
+    }
+
+}
+
+#share-love {
+    .share-the-love {
+        font-size: 42px;
+        margin: 5% 0 10%;
+    }
+
+    .inject-more {
+        height: 40vh;
+        background-color: $primary-color;
+        align-items: center;
+        flex-direction: column;
+
+        .gp-heart {
+            background-color: $white-color;
+            text-decoration: none;
+            color: $primary-color;
+            padding: 15px 30px;
+            width: 15%;
+            margin: 4% auto;
+            font-size: 23px;
+
+            i {
+                padding-left: 13px;
+                font-size: 20px;
+            }
+        }
+
+        .inject-into {
+            font-size: 30px;
+            color: $white-color;
+            width: 50%;
+            margin: 3% auto 0;
+        }
+    }
+}

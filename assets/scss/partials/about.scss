@@ -1,0 +1,41 @@
+.header{
+    height: 50vh;
+    background-image: url(https://s3.amazonaws.com/CFSV2/siteimages/d01/794126-faqcontact.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+#vibedata{
+    p{
+        color: $gray-color;
+    }
+}
+#inputs{
+    .inputs-items{
+        margin-top: 7%;
+    }
+   .send-message{
+    height: 50px;
+    width: 250px;
+    background-color: transparent;
+    color: $black-color;
+    border: 1px solid $gray-gray-color;
+    &:hover{
+        background-color: $black-color;
+        color: $white-color;
+    }
+   }
+}
+
+.location{
+    top: 40px;
+    right: 100px;
+    background-color: $primary-color;
+    color: $white-color;
+    height: 140px;
+    width: 320px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}

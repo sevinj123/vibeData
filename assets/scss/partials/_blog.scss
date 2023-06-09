@@ -1,0 +1,38 @@
+#blog{
+    background-image: url(https://acadiamagic.com/images/1200w/cadillac-1305.jpg);
+    background-size: cover;
+    height: 50vh;
+    background-position: center;
+}
+.longer-text{
+    display: none;
+}
+#check{
+    display: none;
+}
+label{
+    display: inline-block;
+    color: $primary-color;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight:500 ;
+}
+#check:checked ~ .longer-text{
+    display: block;
+}
+.longer-textt{
+    display: none;
+}
+#checkk{
+    display: none;
+}
+label{
+    display: inline-block;
+    color: $primary-color;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight:500 ;
+}
+#checkk:checked ~ .longer-textt{
+    display: block;
+}
