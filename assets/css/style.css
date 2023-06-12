@@ -1,13 +1,19 @@
 header nav .logo {
   width: 13%;
 }
+header nav .nav-item .nav-link {
+  text-align: center;
+}
+header nav .nav-link[href="login.html"] {
+  border: 1px solid white;
+}
 header nav .login {
   height: 46px;
   width: 100px;
   background-color: transparent;
   color: white;
-  border: 1px solid;
   border-radius: 5px;
+  border: none;
   font-size: 20px;
 }
 header nav .login:hover {
@@ -17,6 +23,11 @@ header nav .login:hover {
 
 header nav .home {
   background-color: #d74571;
+  border-radius: 5px;
+}
+header nav .home-page {
+  background-color: #d74571;
+  color: white;
   border-radius: 5px;
 }
 header nav .nav-linkk {
@@ -162,7 +173,7 @@ header .f-btn-out .find-out:hover {
   width: 250px;
   background-color: transparent;
   color: black;
-  border: 1px solid rgb(212, 212, 212);
+  border: 1px solid #d4d4d4;
 }
 #inputs .send-message:hover {
   background-color: black;
@@ -197,7 +208,7 @@ header .f-btn-out .find-out:hover {
   display: none;
 }
 
-label {
+.label {
   display: inline-block;
   color: #d74571;
   text-decoration: underline;
@@ -217,7 +228,7 @@ label {
   display: none;
 }
 
-label {
+.label {
   display: inline-block;
   color: #d74571;
   text-decoration: underline;
@@ -229,7 +240,11 @@ label {
   display: block;
 }
 
-#vibedata .la-plus {
+.share-love {
+  background-color: rgb(238, 236, 225);
+}
+
+#vibedata .plus {
   font-size: 60px;
   background-color: #d74571;
   color: white;
@@ -285,8 +300,8 @@ label {
 }
 
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-color: rgb(247, 247, 247);
+  color: black;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -298,7 +313,7 @@ label {
 }
 
 .active, .accordion:hover {
-  background-color: #ccc;
+  background-color: rgb(247, 247, 247);
 }
 
 .panel {
@@ -308,55 +323,96 @@ label {
   overflow: hidden;
 }
 
-header nav button .logo {
-  width: 13%;
+#vibedata .next-awesome {
+  color: rgb(118, 118, 118);
+  font-size: 32px;
 }
-header nav .login {
-  height: 46px;
-  width: 100px;
-  background-color: transparent;
-  color: white;
-  border: 1px solid;
-  border-radius: 5px;
-  font-size: 20px;
-}
-header nav .login:hover {
+#vibedata .btn-login {
   background-color: #d74571;
   color: white;
+  border: 1px solid #d74571;
+  height: 45px;
+  width: 120px;
+  border-radius: 5px;
+}
+#vibedata .frgt-pswd {
+  color: #d74571;
 }
 
-header nav .home {
-  background-color: #d74571;
-  border-radius: 5px;
-}
-header nav .nav-linkk {
-  color: white;
-  font-size: 20px;
-  margin: 0 7px;
-}
-header nav .nav-linkk:hover {
-  background-color: #d74571;
-  color: white;
-  border-radius: 5px;
-}
-
-header .header-text {
-  text-align: center;
+.inp-items {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-header .header-text h1 {
-  font-family: "Yuji Hentaigana Akari", cursive;
-  font-size: 60px;
-  color: white;
-  font-style: inherit;
-  margin-top: 5%;
+.inp-items .li-input {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 900px;
 }
-header .header-text p {
+.inp-items .li-input .login-input {
+  height: 50px;
+  align-items: center;
+}
+
+.next-data {
+  font-size: 30px;
+  color: rgb(67, 66, 66);
+}
+
+.reset-pswrd {
+  font-size: 25px;
+  color: rgb(67, 66, 66);
+}
+
+.reset-input {
+  width: 900px;
+  height: 45px;
+}
+
+.enter-mail {
+  font-size: 18px;
+}
+
+.free-membership {
+  font-size: 40px;
+  color: black;
+}
+
+.btn-sign-up {
+  height: 43px;
+  width: 130px;
+  background-color: #d74571;
+  border: 1px solid #d74571;
   color: white;
-  margin: 3% auto;
-  font-size: 21px;
+  border-radius: 7px;
+}
+
+.waiting-for {
+  font-size: 30px;
+}
+
+.sign-up {
+  font-size: 23px;
+}
+
+.offerings {
+  font-size: 30px;
+}
+
+.vd-member {
+  height: 55px;
+  width: 290px;
+  background-color: #d74571;
+  color: white;
+  border: 1px solid #d74571;
+  border-radius: 7px;
+  font-size: 23px;
+}
+
+.form-input {
+  width: 500px;
 }
 
 header {
@@ -380,7 +436,13 @@ nav {
 }
 
 #login {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWE4kjtTLWU6_iLJwcsOdbt9m59pPEbMEV1BFuA218L7uVAB3L);
+  background-image: url(https://vibedate.com.au/wp-content/uploads/2014/09/home_app_subheader.jpg);
   background-size: cover;
-  height: 50vh;
+  height: 35vh;
+}
+
+#join-free {
+  background-image: url(https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?cs=srgb&dl=pexels-guillaume-meurice-1591447.jpg&fm=jpg);
+  background-size: cover;
+  height: 35vh;
 }/*# sourceMappingURL=style.css.map */

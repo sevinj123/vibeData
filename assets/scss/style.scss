@@ -1,6 +1,6 @@
 @import './partials/variables';
-@import './partials/header.scss';
-@import './partials/about.scss';
+@import './partials/header';
+@import './partials/about';
 @import './partials/blog';
 @import './partials/get-plan';
 @import './partials/login';
@@ -23,7 +23,12 @@ nav{
     height: 50vh;
 }
 #login{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWE4kjtTLWU6_iLJwcsOdbt9m59pPEbMEV1BFuA218L7uVAB3L);
+    background-image: url(https://vibedate.com.au/wp-content/uploads/2014/09/home_app_subheader.jpg);
     background-size: cover;
-    height: 50vh;
+    height: 35vh;
+}
+#join-free{
+    background-image: url(https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?cs=srgb&dl=pexels-guillaume-meurice-1591447.jpg&fm=jpg);
+    background-size: cover;
+    height: 35vh;
 }

@@ -10,7 +10,7 @@
 #check{
     display: none;
 }
-label{
+.label{
     display: inline-block;
     color: $primary-color;
     text-decoration: underline;
@@ -26,7 +26,7 @@ label{
 #checkk{
     display: none;
 }
-label{
+.label{
     display: inline-block;
     color: $primary-color;
     text-decoration: underline;
@@ -35,4 +35,7 @@ label{
 }
 #checkk:checked ~ .longer-textt{
     display: block;
+}
+.share-love{
+    background-color:$krem-color;
 }

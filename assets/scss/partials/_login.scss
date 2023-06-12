@@ -1,69 +1,88 @@
-header {
-    nav {
-       button{
-        .logo {
-            width: 13%;
-        }
-       }
+#vibedata {
+    .next-awesome {
+        color: $gray-color;
+        font-size: 32px;
+    }
 
-        .login {
-            height: 46px;
-            width: 100px;
-            background-color: transparent;
-            color: $white-color;
-            border: 1px solid;
-            border-radius: 5px;
-            font-size: 20px;
+    .btn-login {
+        background-color: $primary-color;
+        color: $white-color;
+        border: 1px solid $primary-color;
+        height: 45px;
+        width: 120px;
+        border-radius: 5px;
+    }
 
-            &:hover {
-                background-color: $primary-color;
-                color: $white-color;
-            }
-        }
+    .frgt-pswd {
+        color: $primary-color;
     }
 }
 
-header {
-    nav {
-        .home {
-            background-color: $primary-color;
-            border-radius: 5px;
-        }
+.inp-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-        .nav-linkk {
-            color: $white-color;
-            font-size: 20px;
-            margin: 0 7px;
-
-            &:hover {
-                background-color: $primary-color ;
-                color: $white-color;
-                border-radius: 5px;
-            }
-        }
-    }
-}
-
-header {
-    .header-text {
-        text-align: center;
+    .li-input {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        width: 900px;
 
-        h1 {
-            font-family: 'Yuji Hentaigana Akari', cursive;
-            font-size: 60px;
-            color: $white-color;
-            font-style: inherit;
-            margin-top: 5%;
+        .login-input {
+            height: 50px;
+            align-items: center;
         }
 
-        p {
-            color: $white-color;
-            margin: 3% auto;
-            font-size: 21px;
-
-        }
     }
+}
+
+.next-data{
+    font-size: 30px;
+    color:$white-black-color;
+}
+.reset-pswrd{
+    font-size: 25px;
+    color: $white-black-color;
+}
+.reset-input{
+    width: 900px;
+    height: 45px;
+}
+.enter-mail{
+    font-size: 18px;
+}
+.free-membership{
+    font-size: 40px;
+    color: $black-color;
+}
+.btn-sign-up{
+    height: 43px;
+    width: 130px;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    color: $white-color;
+    border-radius: 7px;
+}
+.waiting-for{
+    font-size: 30px;
+}
+.sign-up{
+    font-size: 23px;
+}
+.offerings{
+    font-size: 30px;
+}
+.vd-member{
+    height: 55px;
+    width: 290px;
+    background-color: $primary-color;
+    color: $white-color;
+    border: 1px solid $primary-color;
+    border-radius: 7px;
+    font-size: 23px
+}
+.form-input{
+    width: 500px;
 }

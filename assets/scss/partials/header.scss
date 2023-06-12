@@ -4,13 +4,21 @@ header {
             width: 13%;
         }
 
+        .nav-item .nav-link{
+            text-align: center;       
+        }
+
+        .nav-link[href="login.html"] {  
+            border: 1px solid $white-color;
+        }
+
         .login {
             height: 46px;
             width: 100px;
             background-color: transparent;
             color: $white-color;
-            border: 1px solid;
             border-radius: 5px;
+            border: none;
             font-size: 20px;
 
             &:hover {
@@ -23,8 +31,13 @@ header {
 
 header {
     nav {
-        .home {
+        .home{
             background-color: $primary-color;
+            border-radius: 5px;
+        }
+        .home-page{
+            background-color: $primary-color;
+            color: $white-color;
             border-radius: 5px;
         }
 
@@ -32,7 +45,7 @@ header {
             color: $white-color;
             font-size: 20px;
             margin: 0 7px;
-
+          
             &:hover {
                 background-color: $primary-color ;
                 color: $white-color;
