@@ -149,13 +149,17 @@ header {
     }
 }
 
-#what-others-says {
-    height: 50vh;
-    background-color: $white-gray-color;
-
+#what-others-says{
+    .experienced-dating{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+       margin: 7% auto;
+    }
     .radio-national {
+        margin: 4% auto;
         img {
-            width: 50%;
+            width: 100%;
         }
     }
 

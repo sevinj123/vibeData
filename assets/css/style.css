@@ -116,12 +116,17 @@ header .f-btn-out .find-out:hover {
   color: rgb(118, 118, 118);
 }
 
-#what-others-says {
-  height: 50vh;
-  background-color: rgb(247, 247, 247);
+#what-others-says .experienced-dating {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 7% auto;
+}
+#what-others-says .radio-national {
+  margin: 4% auto;
 }
 #what-others-says .radio-national img {
-  width: 50%;
+  width: 100%;
 }
 
 #share-love .share-the-love {
@@ -244,6 +249,9 @@ header .f-btn-out .find-out:hover {
   background-color: rgb(238, 236, 225);
 }
 
+#vibedata a {
+  text-decoration: none;
+}
 #vibedata .plus {
   font-size: 60px;
   background-color: #d74571;
@@ -321,6 +329,18 @@ header .f-btn-out .find-out:hover {
   display: none;
   background-color: white;
   overflow: hidden;
+}
+
+#our-fans-items .our-fans {
+  font-size: 35px;
+}
+#our-fans-items .carousel-bg {
+  background-color: rgb(247, 247, 247);
+  width: 90%;
+  margin: 0 auto;
+}
+#our-fans-items .carousel-bg .message {
+  font-size: 18px;
 }
 
 #vibedata .next-awesome {
@@ -415,6 +435,20 @@ header .f-btn-out .find-out:hover {
   width: 500px;
 }
 
+#vibedate-everywhere .focus-on-melbourne {
+  font-size: 19px;
+}
+#vibedate-everywhere .focus-on-melbourne a {
+  color: red;
+}
+
+#vibedate-everywhere .everywhere-waiting {
+  font-size: 38px;
+}
+#vibedate-everywhere .becaome-everywhere {
+  font-size: 23px;
+}
+
 header {
   background-image: url(https://i1.wp.com/vibedate.com.au/wp-content/uploads/2018/06/herocouple.jpg?fit=1920%2C1191&ssl=1);
   background-size: cover;
@@ -445,4 +479,10 @@ nav {
   background-image: url(https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?cs=srgb&dl=pexels-guillaume-meurice-1591447.jpg&fm=jpg);
   background-size: cover;
   height: 35vh;
+}
+
+#member {
+  background-image: url(https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_teaser_image/2020-08/screen_shot_2020-08-19_at_1.15.52_pm.png.jpg?itok=UaXsDtHF);
+  background-size: cover;
+  height: 50vh;
 }/*# sourceMappingURL=style.css.map */

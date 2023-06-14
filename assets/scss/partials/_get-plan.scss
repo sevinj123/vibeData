@@ -1,4 +1,7 @@
 #vibedata{
+    a{
+        text-decoration: none;
+    }
     .plus{
         font-size: 60px;
         background-color: $primary-color;
@@ -81,4 +84,17 @@
     display: none;
     background-color: $white-color;
     overflow: hidden;
+  }
+  #our-fans-items{
+    .our-fans{
+        font-size: 35px;
+    }
+    .carousel-bg{
+        background-color: $white-gray-color;
+        width: 90%;
+        margin: 0 auto;
+        .message{
+            font-size: 18px;
+        }
+    }
   }
