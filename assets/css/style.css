@@ -1,3 +1,8 @@
+@import url(https://unpkg.com/@webpixels/css@1.0/dist/index.css);
+header nav {
+  position: fixed;
+  width: 100%;
+}
 header nav .logo {
   width: 13%;
 }
@@ -46,6 +51,7 @@ header .header-text {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  height: 30vh;
 }
 header .header-text h1 {
   font-family: "Yuji Hentaigana Akari", cursive;
@@ -120,10 +126,6 @@ header .f-btn-out .find-out:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 7% auto;
-}
-#what-others-says .radio-national {
-  margin: 4% auto;
 }
 #what-others-says .radio-national img {
   width: 100%;
@@ -452,6 +454,7 @@ header .f-btn-out .find-out:hover {
 header {
   background-image: url(https://i1.wp.com/vibedate.com.au/wp-content/uploads/2018/06/herocouple.jpg?fit=1920%2C1191&ssl=1);
   background-size: cover;
+  background-position: center;
 }
 
 nav {
@@ -461,23 +464,27 @@ nav {
 #what-we-plan {
   background-image: url(https://vibedate.com.au/wp-content/uploads/2014/09/home_app_why_bg.png);
   background-size: cover;
+  background-position: center;
 }
 
 #get-plan {
   background-image: url(https://i1.wp.com/vibedate.com.au/wp-content/uploads/2018/07/vibedate-main-dimmed-1.jpg?fit=1920%2C1080&ssl=1);
   background-size: cover;
   height: 50vh;
+  background-position: center;
 }
 
 #login {
   background-image: url(https://vibedate.com.au/wp-content/uploads/2014/09/home_app_subheader.jpg);
   background-size: cover;
   height: 35vh;
+  background-position: center;
 }
 
 #join-free {
   background-image: url(https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?cs=srgb&dl=pexels-guillaume-meurice-1591447.jpg&fm=jpg);
   background-size: cover;
+  background-position: center;
   height: 35vh;
 }
 
@@ -485,4 +492,5 @@ nav {
   background-image: url(https://cdn2.psychologytoday.com/assets/styles/manual_crop_1_91_1_1528x800/public/field_blog_entry_teaser_image/2020-08/screen_shot_2020-08-19_at_1.15.52_pm.png.jpg?itok=UaXsDtHF);
   background-size: cover;
   height: 50vh;
+  background-position: center;
 }/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,9 @@
+@import url(https://unpkg.com/@webpixels/css@1.0/dist/index.css);
+
 header {
     nav {
+        position: fixed;
+        width: 100%;
         .logo {
             width: 13%;
         }
@@ -61,6 +65,7 @@ header {
         display: flex;
         justify-content: center;
         flex-direction: column;
+        height: 30vh;
 
         h1 {
             font-family: 'Yuji Hentaigana Akari', cursive;
@@ -154,10 +159,8 @@ header {
         display: flex;
         justify-content: center;
         flex-direction: column;
-       margin: 7% auto;
     }
     .radio-national {
-        margin: 4% auto;
         img {
             width: 100%;
         }
