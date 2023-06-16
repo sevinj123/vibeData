@@ -1,8 +1,4 @@
 @import url(https://unpkg.com/@webpixels/css@1.0/dist/index.css);
-header nav {
-  position: fixed;
-  width: 100%;
-}
 header nav .logo {
   width: 13%;
 }
@@ -493,4 +489,4 @@ nav {
   background-size: cover;
   height: 50vh;
   background-position: center;
-}/*# sourceMappingURL=style.css.map */
+}

@@ -366,14 +366,15 @@
                     <div class="row">
                         <div class="col-12">Create</div>
                         <div class="col-lg-4 col-md-6 col-sm-10 col-xs-12 d-flex flex-column">
-                            <label for="name">Name</label>
-                            <input type="text" id="name">
-                            <label for="image">Image</label>
-                            <input type="text" id="image">
+                            <label for="picture">Picture</label>
+                            <input type="text" id="picture">
+                            <label for="datetype">Date type</label>
+                            <input type="text" id="datetype">
+                            <label for="commit">Commit</label>
+                            <input type="text" id="commit">
                             <button class="btn btn-success" id="create-btn">create</button>
                         </div>
                     </div>
-
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -778,7 +779,6 @@
             messagingSenderId: "25356895413",
             appId: "1:25356895413:web:8a1dd620984ffdb9c06afc"
         };
-
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         import { getDatabase, set, ref } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js';
@@ -790,17 +790,19 @@
         btn.addEventListener('click', insertInputs)
         /* o birilerin bos getme sebebi men addeventlistener elememisdim usetegel inputlar bos olmadan gondermemesi ucun indi yazacam, cox asanddi */
         function insertInputs() {
-            const name = document.getElementById('name')
-            const image = document.getElementById('image')
+            const picture = document.getElementById('picture')
+            const datetype = document.getElementById('datetype')
+            const commit=document.getElementById('commit')
             // images/ yazdigim sadece bir addi hansi ki senin databazan orda qalacaq  istediyin qoya bilersen yeni ama artiq createde qoydugun adi read edit delete de isledeceksen
-            if (name.value.trim() != '' && image.value.trim() != '') {
+            if (datetype.value.trim() != '' && datetype.value.trim() != '') {
                 const cardId = generateId(16)
                 // yox 16 elementi olan id olsun , gorduyun kimi her defe 16 elementi olan ferqli idler verir
                 console.log(cardId);
                 set(ref(db, 'Images/' + cardId), {
                     id: cardId,
-                    Name: name.value,
-                    Img: image.value
+                    Picture: picture.value,
+                    Datetype: datetype.value,
+                    Commit:commit.value
                     // Burdaki Name ve ya Img ni deyise bilersen mutleq deyil bele yazmaq istesen image: image.value yaz ferq elemir
                 })
                     .then(res => alert('success'))
@@ -810,8 +812,6 @@
             } 
             //Hazirdi
         }
-
-
         function generateId(length) {
             const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
             let nftId = '';
@@ -820,7 +820,6 @@
                 const randomIndex = Math.floor(Math.random() * chars.length);
                 nftId += chars.charAt(randomIndex);
             }
-
             return nftId;
         }
     </script>
