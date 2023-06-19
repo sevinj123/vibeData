@@ -15,28 +15,28 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const row = document.querySelector('#what-image .row')
+const row = document.querySelector('#what-we-plan .row')
 console.log(row);
 import { getDatabase, get, set, remove, update, ref, child } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 const db = getDatabase();
 getAll()
 function getAll() {
-    get(ref(db, "Images/"))
+    get(ref(db, "Adventure/"))
         .then(data => {
             const datas = data.val()
             for (const key in datas) {
                 const imageDatas = datas[key];
                 console.log(imageDatas);
                 row.innerHTML +=`
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="card mt-5"> 
-                    <img src="${imageDatas.Picture}" class="card-img-top card-img-topp" alt="...">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <img src="${imageDatas.Picture}"
+                        class="card-img-top" alt="...">
                     <div class="card-body">
-                    <h5 class="card-title text-center">${imageDatas.Datetype}</h5>
-                    <p class="card-text text-center">${imageDatas.Commit}</p>
+                        <p class="card-text relishing text-center">${imageDatas.Commit}</p>
                     </div>
                 </div>
-                </div>
+            </div>
             `
             }
             

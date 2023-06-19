@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boys and Girls Dating</title>
+  <link rel="stylesheet" href="./assets/css/dating.css">
+</head>
+<body>
+  <header>
+    <h1>Boys and Girls Dating</h1>
+  </header>
+
+  <main>
+    <form id="registration-form">
+      <h2>Registration</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+      
+      <label for="interests">Interests:</label>
+      <textarea id="interests" name="interests"></textarea>
+      
+      <input type="submit" value="Register">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Boys and Girls Dating</p>
+  </footer>
+  <main>
+    <form id="registration-form">
+      <!-- Form fields here -->
+      <input type="submit" value="Register">
+    </form>
+    <div id="output">
+        
+    </div>
+  </main>
+  
+
+  <script src="./assets/js/dating.js"></script>
+</body>
+</html>

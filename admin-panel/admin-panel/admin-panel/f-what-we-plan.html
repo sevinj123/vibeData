@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akari&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+   <div class="container">
+    <div class="row">
+        <div class="col-12">Create</div>
+        <div class="col-lg-4 col-md-6 col-sm-10 col-xs-12 d-flex flex-column">
+            <label for="picture">Picture</label>
+            <input type="text" id="picture">
+            <label for="commit">Commit</label>
+            <input type="text" id="commit">
+            <button class="btn btn-success" id="create-btn">create</button>
+        </div>
+    </div>
+   </div>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+<script type="module" src="./assets/js/index.js"></script>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyDK49Mm5mV7GrwSZpAa6yyY9vjnFMc-jFo",
+        authDomain: "vibedata-f97f1.firebaseapp.com",
+        projectId: "vibedata-f97f1",
+        storageBucket: "vibedata-f97f1.appspot.com",
+        messagingSenderId: "25356895413",
+        appId: "1:25356895413:web:8a1dd620984ffdb9c06afc"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    import { getDatabase, set, ref } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js';
+
+    const db = getDatabase()
+
+    const btn = document.getElementById('create-btn')
+
+    btn.addEventListener('click', insertInputs)
+    /* o birilerin bos getme sebebi men addeventlistener elememisdim usetegel inputlar bos olmadan gondermemesi ucun indi yazacam, cox asanddi */
+    function insertInputs() {
+        const picture = document.getElementById('picture')
+        const commit=document.getElementById('commit')
+        // images/ yazdigim sadece bir addi hansi ki senin databazan orda qalacaq  istediyin qoya bilersen yeni ama artiq createde qoydugun adi read edit delete de isledeceksen
+        if (commit.value.trim() != '' && commit.value.trim() != '') {
+            const cardId = generateId(16)
+            // yox 16 elementi olan id olsun , gorduyun kimi her defe 16 elementi olan ferqli idler verir
+            console.log(cardId);
+            set(ref(db, 'Adventure/' + cardId), {
+                id: cardId,
+                Picture: picture.value,
+                Commit:commit.value
+                // Burdaki Name ve ya Img ni deyise bilersen mutleq deyil bele yazmaq istesen image: image.value yaz ferq elemir
+            })
+                .then(res => alert('success'))
+                .catch(err => alert('error'))
+        } else {
+            alert('error')
+        } 
+        //Hazirdi
+    }
+    function generateId(length) {
+        const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let nftId = '';
+
+        for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * chars.length);
+            nftId += chars.charAt(randomIndex);
+        }
+        return nftId;
+    }
+</script>
