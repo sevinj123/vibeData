@@ -23,8 +23,6 @@
             <div class="col-lg-4 col-md-6 col-sm-10 col-xs-12 d-flex flex-column">
                 <label for="picture">Picture</label>
                 <input type="text" id="picture">
-                <label for="datetype">Date type</label>
-                <input type="text" id="datetype">
                 <label for="commit">Commit</label>
                 <input type="text" id="commit">
                 <button id="update" class="btn btn-success">save</button>
@@ -37,8 +35,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-<script type="module" src="./assets/js/index.js"></script>
-
+    <script type="module" src="./assets/js/ww-plan.js"></script>
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
@@ -63,25 +60,21 @@
     console.log(UserId);
 
     const picture = document.getElementById('picture')
-    const datetype = document.getElementById('datetype')
     const commit = document.getElementById('commit')
     const updatebtn = document.getElementById('update')
     getDb() 
     function getDb() {
-        get(ref(db, 'Images/' + UserId))
+        get(ref(db, 'Adventure/' + UserId))
             .then(data => {
                 const imagesData = data.val()
-                console.log(imagesData);
                 picture.value = imagesData.Picture,
-                datetype.value = imagesData.Datetype,
                 commit.value = imagesData.Commit
             })
     }
 
     function updateData() {
-        update(ref(db, 'Images/' + UserId), {
+        update(ref(db, 'Adventure/' + UserId), {
             Picture: picture.value,
-            Datetype: datetype.value,
             Commit: commit.value
         })
             .then(alert('ela'))

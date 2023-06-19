@@ -54,18 +54,19 @@
                     <h1 class="mt-5 text-center next-awesome">Log in to start planning your next awesome date</h1>
                    <div class="inp-items mt-5">
                     <div class="mb-3 li-input">
-                        <label for="formGroupExampleInput" class="form-label">Username or E-mail</label>
-                        <input type="text" class="form-control login-input" id="formGroupExampleInput">
+                        <label for="formGroupExampleInput" class="form-label">E-mail</label>
+                        <input type="text" class="form-control login-input email" id="formGroupExampleInput">
                     </div>
                     <div class="mb-3 li-input">
                         <label for="formGroupExampleInput2" class="form-label">Password</label>
-                        <input type="text" class="form-control login-input" id="formGroupExampleInput2">
+                        <input type="text" class="form-control login-input password" id="formGroupExampleInput2">
+                        <i onclick="showPass(this)" class="fa-solid fa-eye"></i>
                        <div class="mt-2">
                         Do you have an account?
                         <a href="register.html">Creat an account</a>
                        </div>
                         <div class="mt-4">
-                            <button class="btn-login">Log In</button>
+                            <button  onclick="loginBtn()"  class="btn-login">Log In</button>
                         </div>
                     </div>
                    </div>
@@ -120,33 +121,31 @@
             icon.classList.remove('fa-eye-slash');
         }
     }
-    function checkLogin() {
-        const emailInput = document.querySelector(".email");
-        const passwordInput = document.querySelector(".password");
+    function loginBtn() {
+        const email = document.querySelector(".email");
+        const password = document.querySelector(".password");
     
-        if (!(emailInput.value.includes("@")) || emailInput.value.trim() === "") {
-               emailInput.style.border="2px solid red";
+        if (!(email.value.includes("@")) || email.value.trim() === "") {
+               email.style.border="2px solid red";
         } else {
-            emailInput.style.border = "";
+            email.style.border = "";
         }
     
-        if (!(passwordInput.value.length >= 6) || passwordInput.value.trim() === "") {
-            passwordInput.style.border="2px solid red";
+        if (!(passwordt.value.length >= 10) || password.value.trim() === "") {
+            password.style.border="2px solid red";
         } else {
-            passwordInput.style.border = "";
+            password.style.border = "";
         }
     
         createUser();
     
         const user = JSON.parse(localStorage.getItem('user'));
-        const result = user.find(u => u.email == emailInput.value && u.password == passwordInput.value);
+        const result = user.find(u => u.email == email.value && u.password == password.value);
         if (result != undefined) {
             document.cookie = `name=${result.name}`;
             document.cookie = `surname=${result.surname}`;
-            // window.location.href = "user.html";
         }
-    }
-                
+    }      
     function createUser() {
         if (localStorage.getItem('user') == null) {
             localStorage.setItem('user', '[]')

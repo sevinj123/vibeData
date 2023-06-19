@@ -13,12 +13,11 @@
 
 <body>
     <div class="container" id="alltable">
-        <a href="index.html" class="btn btn-success my-2">Create</a>
+        <a href="f-what-we-plan.html" class="btn btn-success my-2">Create</a>
         <table class="table table-success table-spried">
             <thead>
                 <th>#</th>
                 <th>Picture</th>
-                <th>Datetype</th>
                 <th>Commit</th>
                 <th colspan="2">Action</th>
             </thead>
@@ -46,11 +45,37 @@
         };
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-        import { getDatabase, set, ref, get,remove } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js';
+        import { getDatabase, set, ref, get , remove} from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js';
 
         const db = getDatabase();
-        
+        const tbody = document.querySelector('#alltable tbody');
+
+        get(ref(db, 'Adventure/'))
+            .then(data => {
+                const allelements = data.val()
+                for (const key in allelements) {
+                    const el = allelements[key];
+                    tbody.innerHTML += `
+                 <tr>
+                    <th scope="row">${el.id}</th>
+                    <td><img src="${el.Picture}" class="w-50"></td>
+                    <td>${el.Commit}</td>
+                    <td><a href="f-wwp-edit.html?${el.id}"class="btn btn-success">Edit</a></td>
+                    <td><button class="btn btn-danger delete-btn">Delete</button></td>
+                </tr>
+        `
+                }
+            })
+            const deletebtn= e.target.closest('.delete-btn')
+            deletebtn.addEventListener('click',function(e){
+            const userId=this.parentElement.parentElement.children[0].innerHTML;
+                console.log(userId);
+                    //  remove(ref(db, 'Images/',userId))
+                    //     .then('silindi')
+                    //     .catch(err=>alert(err))
+                })
     </script>
+    
 </body>
 
 </html>
