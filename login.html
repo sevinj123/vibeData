@@ -60,12 +60,10 @@
                     <div class="mb-3 li-input">
                         <label for="formGroupExampleInput2" class="form-label">Password</label>
                         <input type="text" class="form-control login-input" id="formGroupExampleInput2">
-                        <div class="form-check mt-3">
-                            <input class="form-check-input" type="checkbox" id="gridCheck1">
-                            <label class="form-check-label" for="gridCheck1">
-                                Example checkbox
-                            </label>
-                        </div>
+                       <div class="mt-2">
+                        Do you have an account?
+                        <a href="register.html">Creat an account</a>
+                       </div>
                         <div class="mt-4">
                             <button class="btn-login">Log In</button>
                         </div>
@@ -107,6 +105,53 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+        <script>
+            function showPass(icon){
+        const input = icon.previousElementSibling;
+        if (input.getAttribute("type") == "password") {
+            input.setAttribute("type","text");
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+        }
+        else{
+            input.setAttribute("type","password");
+            icon.classList.add('fa-eye');
+            icon.classList.remove('fa-eye-slash');
+        }
+    }
+    function checkLogin() {
+        const emailInput = document.querySelector(".email");
+        const passwordInput = document.querySelector(".password");
+    
+        if (!(emailInput.value.includes("@")) || emailInput.value.trim() === "") {
+               emailInput.style.border="2px solid red";
+        } else {
+            emailInput.style.border = "";
+        }
+    
+        if (!(passwordInput.value.length >= 6) || passwordInput.value.trim() === "") {
+            passwordInput.style.border="2px solid red";
+        } else {
+            passwordInput.style.border = "";
+        }
+    
+        createUser();
+    
+        const user = JSON.parse(localStorage.getItem('user'));
+        const result = user.find(u => u.email == emailInput.value && u.password == passwordInput.value);
+        if (result != undefined) {
+            document.cookie = `name=${result.name}`;
+            document.cookie = `surname=${result.surname}`;
+            // window.location.href = "user.html";
+        }
+    }
+                
+    function createUser() {
+        if (localStorage.getItem('user') == null) {
+            localStorage.setItem('user', '[]')
+        }}
+        </script>
 </body>
 
 </html>

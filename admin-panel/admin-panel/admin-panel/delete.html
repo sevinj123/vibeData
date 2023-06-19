@@ -49,15 +49,7 @@
         import { getDatabase, set, ref, get,remove } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js';
 
         const db = getDatabase();
-        const UserId = window.location.search.substring(1)
-        const remove = document.querySelector('delete-nft');
-
-       function removeData{
-        remove(ref(db, 'Images/',UserId))
-            .then('silindi')
-            .catch(err=>alert(err))
-       }
-       removeBtn.addEventListener('click',removeData)
+        
     </script>
 </body>
 

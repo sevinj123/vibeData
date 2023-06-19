@@ -447,6 +447,65 @@ header .f-btn-out .find-out:hover {
   font-size: 23px;
 }
 
+.btn-register {
+  width: 230px;
+  height: 50px;
+  background-color: #d74571;
+  color: white;
+}
+
+.register {
+  background-color: black;
+}
+
+.div-label {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.error {
+  color: red;
+}
+
 header {
   background-image: url(https://i1.wp.com/vibedate.com.au/wp-content/uploads/2018/06/herocouple.jpg?fit=1920%2C1191&ssl=1);
   background-size: cover;
@@ -489,4 +548,4 @@ nav {
   background-size: cover;
   height: 50vh;
   background-position: center;
-}/*# sourceMappingURL=style.css.map */
+}

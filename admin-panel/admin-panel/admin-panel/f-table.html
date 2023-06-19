@@ -46,7 +46,7 @@
         };
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-        import { getDatabase, set, ref, get } from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js';
+        import { getDatabase, set, ref, get , remove} from 'https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js';
 
         const db = getDatabase();
         const tbody = document.querySelector('#alltable tbody');
@@ -63,13 +63,21 @@
                     <td>${el.Datetype}</td>
                     <td>${el.Commit}</td>
                     <td><a href="edit.html?${el.id}"class="btn btn-success">Edit</a></td>
-                    <td><button class="btn btn-danger delete-nft">Delete</button></td>
+                    <td><button class="btn btn-danger delete-btn">Delete</button></td>
                 </tr>
         `
                 }
             })
-
+            const deletebtn= e.target.closest('.delete-btn')
+            deletebtn.addEventListener('click',function(e){
+            const userId=this.parentElement.parentElement.children[0].innerHTML;
+                console.log(userId);
+                    //  remove(ref(db, 'Images/',userId))
+                    //     .then('silindi')
+                    //     .catch(err=>alert(err))
+                })
     </script>
+    
 </body>
 
 </html>
