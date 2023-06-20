@@ -84,12 +84,12 @@ document.getElementById("register-form").addEventListener('submit', e => {
  } 
 
  let users = {
-     cardId: generateId(16),
+     id: generateId(16),
      fullname: fullname.value,
      email: email.value,
      birthdate:bthdate.value,
      password: password.value,
-     admin: false
+     admin: true
  }
 
  set(ref(db, `Users/${users.cardId}`), users)
@@ -111,7 +111,11 @@ function generateId(length) {
 
  for (let i = 0; i < length; i++) {
      const randomIndex = Math.floor(Math.random() * chars.length);
+    //  Math.floor-tam ededlere yuvarlaqlasdirir
+    // Math.random() -0 a qeder bize random ededler verir esas lazim olan budur ki random id versin
      nftId += chars.charAt(randomIndex);
+    //  chars.charAt-() daxilinde ne yazilsa meselen 4 olsa chars stringin 4cu yerde duran ededini bize verecek bu funksiya random islediyine gore onu for-a 
+    //  salib random id qebul etdirib onu da nft deyiseninin ustune gelirik meselen generate4 olarsa 4 reqemli id yeni simvol verecek
  }
  return nftId;
 }

@@ -17,7 +17,7 @@
 <body>
    <div class="container">
     <div class="row">
-        <div class="col-12">Create</div>
+        <a href="f-blog-table.html"><div class="col-12 btn btn-succes">Go to table</div></a>
         <div class="col-lg-4 col-md-6 col-sm-10 col-xs-12 d-flex flex-column">
             <label for="picture">Picture</label>
             <input type="text" id="picture">
@@ -59,29 +59,25 @@ crossorigin="anonymous"></script>
     const btn = document.getElementById('create-btn')
 
     btn.addEventListener('click', insertInputs)
-    /* o birilerin bos getme sebebi men addeventlistener elememisdim usetegel inputlar bos olmadan gondermemesi ucun indi yazacam, cox asanddi */
     function insertInputs() {
         const picture = document.getElementById('picture')
         const fullname = document.getElementById('fullname')
         const age=document.getElementById('age')
-        // images/ yazdigim sadece bir addi hansi ki senin databazan orda qalacaq  istediyin qoya bilersen yeni ama artiq createde qoydugun adi read edit delete de isledeceksen
-        if (datetype.value.trim() != '' && datetype.value.trim() != '') {
+        if (age.value.trim() != '' && age.value.trim() != '') {
             const cardId = generateId(16)
-            // yox 16 elementi olan id olsun , gorduyun kimi her defe 16 elementi olan ferqli idler verir
             console.log(cardId);
             set(ref(db, 'Blog/' + cardId), {
                 id: cardId,
                 Picture: picture.value,
                 FullName: fullname.value,
                 Age:age.value
-                // Burdaki Name ve ya Img ni deyise bilersen mutleq deyil bele yazmaq istesen image: image.value yaz ferq elemir
             })
                 .then(res => alert('success'))
                 .catch(err => alert('error'))
         } else {
             alert('error')
         } 
-        //Hazirdi
+
     }
     function generateId(length) {
         const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
