@@ -74,11 +74,12 @@
 
     function updateData() {
         update(ref(db, 'Adventure/' + UserId), {
-            Picture: picture.value,
+            Picture: piacture.value,
             Commit: commit.value
         })
-            .then(alert('ela'))
+            .then(alert('ela'))                 
             .catch(err => alert('yeniden sina'))
     }
     updatebtn.addEventListener('click', updateData)
 </script>
+

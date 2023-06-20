@@ -757,6 +757,20 @@
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
 
+    <script>
+        function getCookie(cookieName) {
+            let cookie = {};
+            document.cookie.split(';').forEach(function(el) {
+                let [key,value] = el.split('=');
+                cookie[key.trim()] = value;
+            })
+            return cookie[cookieName];
+       }
+
+       if (getCookie('admin') === false || getCookie('admin') === 'false') {
+        window.location.href = '../../../index.html'
+       }
+    </script>
     
 
 </body>

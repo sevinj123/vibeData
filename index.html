@@ -46,7 +46,7 @@
                                 <a class="nav-link login" href="login.html">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link login" href="admin-panel/admin-panel/admin-panel/">admin-panel</a>
+                                <a class="nav-link login" id="btn-admin-panel" href="admin-panel/admin-panel/admin-panel/">admin-panel</a>
                             </li>
                         </ul>
                     </div>
@@ -204,6 +204,21 @@
         crossorigin="anonymous"></script>
     <script type="module" src="./assets/js/index.js"></script>
     <script type="module" src="./assets/js/ww-plan.js"></script>
+
+    <script>
+        function getCookie(cookieName) {
+            let cookie = {};
+            document.cookie.split(';').forEach(function(el) {
+                let [key,value] = el.split('=');
+                cookie[key.trim()] = value;
+            })
+            return cookie[cookieName];
+       }
+
+       if (! (getCookie('admin') === true || getCookie('admin') === 'true')) {
+          document.getElementById('btn-admin-panel').style.display = 'none'
+       }
+    </script>
 </body>
 
 </html>

@@ -66,7 +66,7 @@
                         <a href="register.html">Creat an account</a>
                        </div>
                         <div class="mt-4">
-                            <button  onclick="loginBtn()"  class="btn-login">Log In</button>
+                            <button id="btn-login" class="btn-login">Log In</button>
                         </div>
                     </div>
                    </div>
@@ -107,50 +107,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-        <script>
-            function showPass(icon){
-        const input = icon.previousElementSibling;
-        if (input.getAttribute("type") == "password") {
-            input.setAttribute("type","text");
-            icon.classList.remove('fa-eye');
-            icon.classList.add('fa-eye-slash');
-        }
-        else{
-            input.setAttribute("type","password");
-            icon.classList.add('fa-eye');
-            icon.classList.remove('fa-eye-slash');
-        }
-    }
-    function loginBtn() {
-        const email = document.querySelector(".email");
-        const password = document.querySelector(".password");
-    
-        if (!(email.value.includes("@")) || email.value.trim() === "") {
-               email.style.border="2px solid red";
-        } else {
-            email.style.border = "";
-        }
-    
-        if (!(passwordt.value.length >= 10) || password.value.trim() === "") {
-            password.style.border="2px solid red";
-        } else {
-            password.style.border = "";
-        }
-    
-        createUser();
-    
-        const user = JSON.parse(localStorage.getItem('user'));
-        const result = user.find(u => u.email == email.value && u.password == password.value);
-        if (result != undefined) {
-            document.cookie = `name=${result.name}`;
-            document.cookie = `surname=${result.surname}`;
-        }
-    }      
-    function createUser() {
-        if (localStorage.getItem('user') == null) {
-            localStorage.setItem('user', '[]')
-        }}
-        </script>
+        <script type="module" src="./assets/js/login.js"> </script>
 </body>
 
 </html>

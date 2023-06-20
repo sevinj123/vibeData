@@ -68,14 +68,21 @@
         `
                 }
             })
-            const deletebtn= e.target.closest('.delete-btn')
-            deletebtn.addEventListener('click',function(e){
-            const userId=this.parentElement.parentElement.children[0].innerHTML;
-                console.log(userId);
-                    //  remove(ref(db, 'Images/',userId))
-                    //     .then('silindi')
-                    //     .catch(err=>alert(err))
+            .catch(console.error)
+            .finally(() => {
+                const deletebtns = document.querySelectorAll('.delete-btn')
+            
+                deletebtns.forEach(deletebtn => {
+                    deletebtn.addEventListener('click',function(e){
+                        const userId=this.parentElement.parentElement.children[0].innerHTML;
+                        e.target.closest('tr').remove()
+                        console.log(userId);
+                            remove(ref(db, `Images/${userId}`))
+                            .then(alert('silindi'))
+                            .catch(err=>alert(err))
+                    })
                 })
+            })
     </script>
     
 </body>
