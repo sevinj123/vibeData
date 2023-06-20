@@ -213,6 +213,11 @@ header .f-btn-out .find-out:hover {
   border-radius: 50%;
 }
 
+.la-search {
+  top: 30%;
+  right: 3%;
+}
+
 #vibedata a {
   text-decoration: none;
 }
@@ -528,4 +533,4 @@ nav {
   background-size: cover;
   height: 50vh;
   background-position: center;
-}/*# sourceMappingURL=style.css.map */
+}
