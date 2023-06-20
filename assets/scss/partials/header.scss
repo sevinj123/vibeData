@@ -2,6 +2,7 @@
 
 header {
     nav {
+
         // position: fixed;
         // width: 100%;
         // background-color: $gray-color;
@@ -9,11 +10,11 @@ header {
             width: 13%;
         }
 
-        .nav-item .nav-link{
-            text-align: center;       
+        .nav-item .nav-link {
+            text-align: center;
         }
 
-        .nav-link[href="login.html"] {  
+        .nav-link[href="login.html"] {
             border: 1px solid $white-color;
         }
 
@@ -36,11 +37,12 @@ header {
 
 header {
     nav {
-        .home{
+        .home {
             background-color: $primary-color;
             border-radius: 5px;
         }
-        .home-page{
+
+        .home-page {
             background-color: $primary-color;
             color: $white-color;
             border-radius: 5px;
@@ -50,7 +52,7 @@ header {
             color: $white-color;
             font-size: 20px;
             margin: 0 7px;
-          
+
             &:hover {
                 background-color: $primary-color ;
                 color: $white-color;
@@ -141,7 +143,18 @@ header {
     display: flex;
     justify-content: center;
 
+    @include respond(tab-port) { // if you pass tab-port here as an argument to the function, it'll apply only styles inside the if $breakpoint == tab-port
+        width: 50%;
+    }
+
 }
+
+// // just for testing purposes
+// body {
+//     @include respond(phone) {
+//         background-color: blue !important;
+//     }
+// }
 
 #what-we-plan {
     .scavenger {
@@ -155,12 +168,13 @@ header {
     }
 }
 
-#what-others-says{
-    .experienced-dating{
+#what-others-says {
+    .experienced-dating {
         display: flex;
         justify-content: center;
         flex-direction: column;
     }
+
     .radio-national {
         img {
             width: 100%;
@@ -170,12 +184,26 @@ header {
 }
 
 #share-love {
-   .share-love{
-    background-color: $krem-color;
-   }
+    .share-love {
+        background-color: $krem-color;
+    }
+
     .share-the-love {
         font-size: 42px;
         margin: 5% 0 10%;
+
+        @include respond(phone){
+            font-size: 18px;
+        }
+        @include respond(tab-port){
+            font-size: 21px;
+        }
+        @include respond(tab-land){
+            font-size: 21px;
+        }
+        @include respond(big-desktop){
+            font-size: 21px;
+        }
     }
 
     .inject-more {
@@ -193,6 +221,19 @@ header {
             margin: 4% auto;
             font-size: 23px;
 
+            @include respond(phone){
+                width: 60%;
+            }
+            @include respond(tab-port){
+                width: 25%;
+            }
+            @include respond(tab-land){
+                width: 20%;
+            }
+            @include respond( big-desktop){
+                width: 20%;
+            }
+
             i {
                 padding-left: 13px;
                 font-size: 20px;
@@ -204,6 +245,20 @@ header {
             color: $white-color;
             width: 50%;
             margin: 3% auto 0;
+
+            @include respond(phone){
+                font-size: 18px;
+            }
+            @include respond(tab-port){
+                font-size: 21px;
+            }
+            @include respond(tab-land){
+                font-size: 21px;
+            }
+            @include respond(big-desktop){
+                font-size: 21px;
+            }
         }
     }
 }
+

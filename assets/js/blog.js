@@ -32,7 +32,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const row = document.querySelector('.row')
+const row = document.getElementById('testing')
 console.log(row);
 import { getDatabase, get, set, remove, update, ref, child } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 const db = getDatabase();
