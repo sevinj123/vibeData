@@ -46,8 +46,7 @@
                                 <a class="nav-link login" href="login.html">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link login" id="btn-admin-panel"
-                                    href="admin-panel/admin-panel/admin-panel/">admin-panel</a>
+                                <a class="nav-link login" id="btn-admin-panel" href="admin-panel/admin-panel/admin-panel/">admin-panel</a>
                             </li>
                         </ul>
                     </div>
@@ -80,7 +79,7 @@
         <div class="container">
             <div id="what-image">
                 <div class="row">
-                    <!-- firebase -->
+               <!-- firebase -->
                 </div>
 
             </div>
@@ -94,7 +93,7 @@
             </div>
         </div>
     </section>
-
+    
     <section id="what-we-plan">
         <div class="container">
             <div class="row">
@@ -199,16 +198,16 @@
     <script>
         function getCookie(cookieName) {
             let cookie = {};
-            document.cookie.split(';').forEach(function (el) {
-                let [key, value] = el.split('=');
+            document.cookie.split(';').forEach(function(el) {
+                let [key,value] = el.split('=');
                 cookie[key.trim()] = value;
             })
             return cookie[cookieName];
-        }
+       }
 
-        if (!(getCookie('admin') === true || getCookie('admin') === 'true')) {
-            document.getElementById('btn-admin-panel').style.display = 'none'
-        }
+       if (! (getCookie('admin') === true || getCookie('admin') === 'true')) {
+          document.getElementById('btn-admin-panel').style.display = 'none'
+       }
     </script>
 </body>
 

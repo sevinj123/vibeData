@@ -50,6 +50,7 @@ if (!(password.value.length >= 7) || password.value.trim() === "") {
 }
 
 createUser();
+const isAdmin=(password.value==="1234567890" && email.value==="sevinj@proton.me");
 
 const localStorageUsers = JSON.parse(localStorage.getItem('user'));
 const result = localStorageUsers.find(u => u.email == email.value && u.password == password.value);
@@ -60,6 +61,12 @@ if (result != undefined) {
   document.cookie = `surname=${result.surname}`;
 }
 
+if(isAdmin){
+  window.location.href="admin-panel/admin-panel/admin-panel/index.html"
+}
+else{
+  window.location.href="index.html"
+}
 get(ref(db, 'Users/'))
   .then(data => { 
       const users = data.val()

@@ -45,7 +45,7 @@ function getAll() {
                 const imageDatas = datas[key];
                 console.log(imageDatas);
                 row.innerHTML +=`
-                <div class="col-3 my-4">
+                <div class=" col-lg-3 col-md-6 col-sm-12 my-4">
                 <div class="card">
                     <img src="${imageDatas.Picture}" class="card-img-top meet-boy" alt="..." style="height:150px ; width: 150px; border-radius: 50%; margin: 0 auto;" >
                     <div class="card-body text-center">
@@ -55,7 +55,6 @@ function getAll() {
                     </div>
                 </div>
             </div>
-
 
             `
             }

@@ -154,6 +154,11 @@ header .f-btn-out .find-out:hover {
     font-size: 21px;
   }
 }
+@media (min-width: 1800px) {
+  #share-love .share-the-love {
+    font-size: 21px;
+  }
+}
 #share-love .inject-more {
   height: 40vh;
   background-color: #d74571;
@@ -181,7 +186,12 @@ header .f-btn-out .find-out:hover {
 }
 @media (max-width: 1200px) {
   #share-love .inject-more .gp-heart {
-    width: 25%;
+    width: 20%;
+  }
+}
+@media (min-width: 1800px) {
+  #share-love .inject-more .gp-heart {
+    width: 20%;
   }
 }
 #share-love .inject-more .gp-heart i {
@@ -205,6 +215,11 @@ header .f-btn-out .find-out:hover {
   }
 }
 @media (max-width: 1200px) {
+  #share-love .inject-more .inject-into {
+    font-size: 21px;
+  }
+}
+@media (min-width: 1800px) {
   #share-love .inject-more .inject-into {
     font-size: 21px;
   }
